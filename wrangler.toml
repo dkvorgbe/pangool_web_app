@@ -1,24 +1,13 @@
+# Cloudflare Pages Configuration
+# This file is optional for Pages projects deployed via Git
+# Custom domains and other settings can be configured in the Cloudflare dashboard
+
+# Project name (optional - will use the Pages project name from dashboard)
 name = "pangool-web-app"
-compatibility_date = "2024-10-01"
-pages_build_output_dir = "."
 
-[env.production]
-name = "pangool-web-app"
-routes = [
-  { pattern = "pangool.com", custom_domain = true },
-  { pattern = "www.pangool.com", custom_domain = true }
-]
+# For Pages, the directory to deploy is specified in the deploy command:
+# npx wrangler pages deploy .
 
-[env.staging]
-name = "pangool-web-app-staging"
-
-# Static file serving configuration
-[site]
-bucket = "."
-
-# Custom build configuration (if needed)
-# [build]
-# command = ""
-# cwd = ""
-# watch_dir = ""
+# Note: This wrangler.toml is primarily for reference
+# Pages configuration is handled through the Cloudflare dashboard
 
