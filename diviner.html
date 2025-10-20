@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMAN I _ PANGOOL:INTERFACE I.01 - Divination</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/custom.css">
+</head>
+<body class="bg-gray-300 text-gray-800 font-mono">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 p-4 flex justify-between items-center z-10 bg-gray-300">
+        <div class="text-sm md:text-base text-red-600">UMAN I _ PANGOOL:INTERFACE I.01</div>
+        <div class="text-sm md:text-base text-red-600">
+            <span id="current-date">19.10.2025</span>
+            <span class="ml-4">C</span>
+            <span class="ml-4">SATURDAY</span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
+        <!-- Loading State -->
+        <div id="loading-state" class="flex flex-col items-center justify-center min-h-[60vh]">
+            <div class="text-red-600 text-xl mb-4">Consulting the ancestors...</div>
+            <div class="loading-spinner"></div>
+        </div>
+
+        <!-- Divination Results (hidden initially) -->
+        <div id="divination-results" class="hidden">
+            <!-- HEART Section -->
+            <div class="divination-section mb-12">
+                <div class="flex flex-col md:flex-row items-center gap-8 mb-4">
+                    <div class="red-blob">
+                        <span class="blob-text">HEART</span>
+                    </div>
+                    <div class="text-left flex-1">
+                        <p class="text-sm italic mb-2">Matters of love, relationships, the threads that bind us, the acts that untether us</p>
+                    </div>
+                </div>
+                <div id="heart-text" class="divination-text"></div>
+            </div>
+
+            <!-- HEAD Section -->
+            <div class="divination-section mb-12">
+                <div class="flex flex-col md:flex-row items-center gap-8 mb-4">
+                    <div class="text-right flex-1 md:order-1">
+                        <p class="text-sm italic mb-2">Matters of love, relationships, the threads that bind us, the acts that untether us</p>
+                    </div>
+                    <div class="red-blob md:order-2">
+                        <span class="blob-text">HEAD</span>
+                    </div>
+                </div>
+                <div id="head-text" class="divination-text"></div>
+            </div>
+
+            <!-- SOUL Section -->
+            <div class="divination-section mb-12">
+                <div class="flex flex-col md:flex-row items-center gap-8 mb-4">
+                    <div class="red-blob">
+                        <span class="blob-text">SOUL</span>
+                    </div>
+                    <div class="text-left flex-1">
+                        <p class="text-sm italic mb-2">Matters of love, relationships, the threads that bind us, the acts that untether us</p>
+                    </div>
+                </div>
+                <div id="soul-text" class="divination-text"></div>
+            </div>
+
+            <!-- FLESH Section -->
+            <div class="divination-section mb-12">
+                <div class="flex flex-col md:flex-row items-center gap-8 mb-4">
+                    <div class="text-right flex-1 md:order-1">
+                        <p class="text-sm italic mb-2">Matters of love, relationships, the threads that bind us, the acts that untether us</p>
+                    </div>
+                    <div class="red-blob md:order-2">
+                        <span class="blob-text">FLESH</span>
+                    </div>
+                </div>
+                <div id="flesh-text" class="divination-text"></div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col md:flex-row gap-4 justify-center mt-12">
+                <button id="new-divination-btn" class="action-button">
+                    Generate New Divination
+                </button>
+                <button id="home-btn" class="action-button">
+                    Return Home
+                </button>
+            </div>
+        </div>
+
+        <!-- Error State -->
+        <div id="error-state" class="hidden flex flex-col items-center justify-center min-h-[60vh]">
+            <div class="text-red-600 text-xl mb-4">Unable to reach the ancestors</div>
+            <p class="text-gray-600 mb-6" id="error-message">Please try again later.</p>
+            <button id="retry-btn" class="action-button">
+                Try Again
+            </button>
+            <button id="home-error-btn" class="action-button mt-4">
+                Return Home
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="fixed bottom-0 left-0 right-0 p-4 flex justify-between items-center z-10 bg-gray-300">
+        <div class="text-sm md:text-base text-red-600">BY UNPAID LABOUR</div>
+        <div class="text-sm md:text-base text-red-600">© 2025</div>
+    </footer>
+
+    <script src="scripts/diviner.js"></script>
+</body>
+</html>
+

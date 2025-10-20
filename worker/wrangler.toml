@@ -1,0 +1,14 @@
+name = "serer-divination-api"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+# Environment variables (non-sensitive)
+[env.production]
+# Sensitive variables like MODEL_API_ENDPOINT and MODEL_API_KEY
+# should be set using: wrangler secret put VARIABLE_NAME
+vars = {}
+
+# Development environment
+[env.development]
+vars = {}
+

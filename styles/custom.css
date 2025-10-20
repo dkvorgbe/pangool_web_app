@@ -1,0 +1,185 @@
+/* Custom styling for Serer Divination Web App */
+
+:root {
+    --red-primary: #ff0000;
+    --red-dark: #cc0000;
+    --gray-light: #cccccc;
+    --gray-medium: #808080;
+    --gray-dark: #333333;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.05em;
+}
+
+/* Geometric Visualization */
+.geometric-group {
+    transform-origin: center;
+    transition: transform 0.3s ease-out;
+}
+
+#geometric-container:hover .geometric-group {
+    transform: scale(1.05);
+}
+
+.vertex {
+    cursor: pointer;
+    transition: r 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.vertex:hover {
+    r: 12;
+    opacity: 1;
+}
+
+/* Make SVG responsive */
+#geometric-shape {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    #geometric-shape {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    #geometric-shape {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* Red Blob Styling */
+.red-blob {
+    width: 200px;
+    height: 100px;
+    background-color: var(--red-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+.blob-text {
+    color: var(--gray-light);
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .red-blob {
+        width: 160px;
+        height: 80px;
+    }
+    
+    .blob-text {
+        font-size: 20px;
+    }
+}
+
+/* Divination Section */
+.divination-section {
+    margin-bottom: 3rem;
+}
+
+.divination-text {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1.5rem;
+    border-left: 4px solid var(--red-primary);
+    line-height: 1.8;
+    font-size: 16px;
+    color: var(--gray-dark);
+}
+
+@media (max-width: 768px) {
+    .divination-text {
+        font-size: 14px;
+        padding: 1rem;
+    }
+}
+
+/* Action Buttons */
+.action-button {
+    background-color: var(--red-primary);
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    text-transform: uppercase;
+}
+
+.action-button:hover {
+    background-color: var(--red-dark);
+    transform: translateY(-2px);
+}
+
+.action-button:active {
+    transform: translateY(0);
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--gray-light);
+    border-top: 4px solid var(--red-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Utility Classes */
+.text-glow {
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Smooth transitions */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header and Footer styling */
+header, footer {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), transparent);
+}
+
+/* Responsive text */
+@media (max-width: 640px) {
+    header, footer {
+        font-size: 10px;
+    }
+    
+    header div, footer div {
+        font-size: 10px;
+    }
+}
+

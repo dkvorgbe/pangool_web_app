@@ -1,0 +1,23 @@
+{
+  "name": "serer-divination-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker for Serer Divination API proxy",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "tail": "wrangler tail"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "api",
+    "proxy"
+  ],
+  "author": "Unpaid Labour",
+  "license": "ISC",
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
+
