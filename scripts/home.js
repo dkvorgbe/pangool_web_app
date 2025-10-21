@@ -11,13 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const month = String(today.getMonth() + 1).padStart(2, '0');
         const year = today.getFullYear();
         dateElement.textContent = `${day}.${month}.${year}`;
+        console.log(`Date: ${day}.${month}.${year}`);
     }
     
     // Set current day of the week
-    const dayElements = document.querySelectorAll('header span');
-    if (dayElements.length >= 3) {
+    const dayElement = document.getElementById('current-day');
+
+    if (dayElement) {
         const dayOfWeek = today.toLocaleDateString('en-US', { weekday: 'long' }).toUpperCase();
-        dayElements[2].textContent = dayOfWeek; // The third span is the day
+        dayElement.textContent = dayOfWeek;
+        console.log(dayOfWeek);
     }
 
     // Get geometric container and vertices
