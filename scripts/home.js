@@ -2,17 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    
-    // insert the pangol_diamont html code into the geometric-container 
-    // fetch('../pangol_diamond.html')
-    //   .then(r => r.text())
-    //   .then(svg => {
-    //     console.log(svg);
-    //     document.getElementById('geometric-container').innerHTML = svg;
-    //     console.log(document.getElementById('geometric-container'));
-    //   })
-    //   .catch(err => console.error('Error loading SVG:', err));
-    
     // Set current date
     const dateElement = document.getElementById('current-date');
     if (dateElement) {
