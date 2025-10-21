@@ -39,8 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set current day of the week
     const dayElements = document.querySelectorAll('header span');
     if (dayElements.length >= 3) {
-        const daysOfWeek = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
-        const dayOfWeek = daysOfWeek[today.getDay()];
+        const dayOfWeek = today.toLocaleDateString('en-US', { weekday: 'long' }).toUpperCase();
         dayElements[2].textContent = dayOfWeek; // The third span is the day
     }
 
