@@ -2,14 +2,23 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Set current date
+    // Set current date and day
     const dateElement = document.getElementById('current-date');
+    const today = new Date();
+    
     if (dateElement) {
-        const today = new Date();
         const day = String(today.getDate()).padStart(2, '0');
         const month = String(today.getMonth() + 1).padStart(2, '0');
         const year = today.getFullYear();
         dateElement.textContent = `${day}.${month}.${year}`;
+    }
+    
+    // Set current day of the week
+    const dayElements = document.querySelectorAll('header span');
+    if (dayElements.length >= 3) {
+        const daysOfWeek = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
+        const dayOfWeek = daysOfWeek[today.getDay()];
+        dayElements[2].textContent = dayOfWeek; // The third span is the day
     }
 
     // Get geometric container and vertices
