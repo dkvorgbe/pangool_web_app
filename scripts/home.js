@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const month = String(today.getMonth() + 1).padStart(2, '0');
         const year = today.getFullYear();
         dateElement.textContent = `${day}.${month}.${year}`;
-        console.log(`Date: ${day}.${month}.${year}`);
     }
     
     // Set current day of the week
@@ -20,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (dayElement) {
         const dayOfWeek = today.toLocaleDateString('en-US', { weekday: 'long' }).toUpperCase();
         dayElement.textContent = dayOfWeek;
-        console.log(dayOfWeek);
     }
 
     // Get geometric container and vertices
