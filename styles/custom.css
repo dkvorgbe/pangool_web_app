@@ -183,3 +183,8 @@ header, footer {
     }
 }
 
+/* SVG styling */
+svg {
+    height: 70vh;
+}
+
