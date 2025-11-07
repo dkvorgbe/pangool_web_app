@@ -63,12 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Add visual feedback for focus
-    geometricContainer.addEventListener('focus', () => {
-        geometricContainer.style.outline = '2px solid rgba(255, 0, 0, 0.5)';
-    });
+    // geometricContainer.addEventListener('focus', () => {
+    //     geometricContainer.style.outline = '2px solid rgba(255, 0, 0, 0.5)';
+    // });
 
-    geometricContainer.addEventListener('blur', () => {
-        geometricContainer.style.outline = 'none';
-    });
+    // geometricContainer.addEventListener('blur', () => {
+    //     geometricContainer.style.outline = 'none';
+    // });
 });
 
