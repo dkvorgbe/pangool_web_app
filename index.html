@@ -23,10 +23,13 @@
 
     <!-- Main Content -->
     <main class="relative w-full h-screen flex items-center justify-center">
-        <!-- Background Image Container -->
-        <div class="absolute inset-0 bg-cover bg-center opacity-70" 
-             style="background-image: url('assets/images/background.svg');">
-        </div>
+
+        <!-- Background Video Container -->
+        <video autoplay muted loop playsinline class="absolute w-full">
+            <source src="assets/images/background.webm" type="video/webm">
+        </video>
+
+        <div class="video-overlay"></div>
 
         <!-- Geometric Visualization -->
         <div id="geometric-container" class="relative z-10 cursor-pointer">
@@ -34,7 +37,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="fixed bottom-0 left-0 right-0 p-4 flex justify-between items-center z-10">
+    <footer class="fixed bottom-0 left-0 right-0 px-4 py-4 flex justify-between items-center z-10">
         <div class="text-sm md:text-base">BY UNPAID LABOUR</div>
         <div class="text-sm md:text-base">© 2025</div>
     </footer>
