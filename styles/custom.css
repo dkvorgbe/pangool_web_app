@@ -204,6 +204,16 @@ svg {
 /* Video background styling */
 video {
     z-index: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
 }
 
 /* Video overlay gradient for better foreground visibility */
@@ -224,4 +234,54 @@ video {
 .video-fallback {
     z-index: -1;
 }
+
+/* Moon and Sun hover effects */
+
+#moon, #sun, #okiin, #maam, #roog{
+    transition: transform 0.3s ease;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#moon {
+    transform: translate(0px, 255px);
+  }
+  
+  #moon:hover {
+    transform: translate(0px, 255px) scale(1.5);
+  }
+  
+  #sun {
+    transform: translate(520px, 180px);
+  }
+  
+  #sun:hover {
+    transform: translate(520px, 180px) scale(1.5);
+  }
+
+  #okiin{
+    transform: translate(263px, 230px);
+  }
+
+  #okiin:hover{
+    transform: translate(263px, 230px) scale(1.2);
+  }
+
+
+  #maam{
+    transform: translate(255px, 610px);
+  }
+
+  #maam:hover{
+    transform: translate(255px, 610px) scale(1.2);
+  }
+
+  #roog{
+    transform: translate(287px, 0px);
+  }
+
+  #roog:hover{
+    transform: translate(287px, 0px) scale(1.2);
+  }
+
 

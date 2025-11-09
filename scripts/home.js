@@ -62,6 +62,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+
+    const vid = document.getElementById('background-video');
+    vid.addEventListener('ended', () => {
+        console.log('Video ended');
+        vid.playbackRate *= -1;
+        vid.play();
+    });
+
     // Add visual feedback for focus
     // geometricContainer.addEventListener('focus', () => {
     //     geometricContainer.style.outline = '2px solid rgba(255, 0, 0, 0.5)';
@@ -71,4 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //     geometricContainer.style.outline = 'none';
     // });
 });
+
+
+
 

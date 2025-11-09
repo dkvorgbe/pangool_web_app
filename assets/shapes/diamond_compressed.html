@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="595" fill="none" viewBox="0 0 550 595" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="595" fill="none" viewBox="-25 -25 600 650" preserveAspectRatio="xMidYMid meet">
   
   <!--From legacy SVG, these attrs are used for animations id="main-shape" class="geometric-group" -->
   <g transform="translate(20, 0)" filter="url(#a)">
@@ -9,25 +9,27 @@
   </g>
 
   <g id="vertices">
+    <text id="roog" text-anchor="middle" fill="#ff0000" font-size="16" font-weight="bold">ROOG</text>
+
+    <text id="maam" text-anchor="middle" fill="#ff0000" font-size="16" font-weight="bold">MAAM</text>
     
-    <text x="287" y="0" text-anchor="middle" fill="#ff0000" font-size="16" font-weight="bold">ROOG</text>
-    <text x="255" y="610" text-anchor="middle" fill="#ff0000" font-size="16" font-weight="bold">MAAM</text>
-    
-    <ellipse cx="263" cy="230" fill="red" rx="36" ry="13"/>
-    <text x="263" y="238" text-anchor="middle" fill="white" font-size="16" >OKIIN</text>
-    <!-- <circle cx="300" cy="300" r="8" fill="#ff0000" class="vertex" data-label="okiin"/> -->
+    <g id="okiin">
+      <ellipse  fill="red" rx="35" ry="12"/>
+      <text text-anchor="middle" dominant-baseline="middle" y="2" fill="white" font-size="16" >OKIIN</text>
+    </g>
 
     <!-- MOON -->
-    <g transform="translate(0, 255)" filter="url(#filter0_d_1_102)">
+    <g id="moon" filter="url(#filter0_d_1_102)">
+
+      <ellipse cx="12.5" cy="12.5" rx="15" ry="15" fill="red" fill-opacity="0"/>
+
       <path d="M12.544 20.656C10.88 20.656 9.4 20.312 8.104 19.624C6.824 18.92 5.816 17.944 5.08 16.696C4.36 15.432 4 13.976 4 12.328C4 11.096 4.208 9.976 4.624 8.968C5.04 7.944 5.624 7.064 6.376 6.328C7.144 5.576 8.048 5 9.088 4.6C10.144 4.2 11.296 4 12.544 4C12.992 4 13.416 4.024 13.816 4.072C14.232 4.12 14.632 4.2 15.016 4.312V5.104C13.608 5.104 12.376 5.408 11.32 6.016C10.28 6.624 9.472 7.472 8.896 8.56C8.32 9.632 8.032 10.888 8.032 12.328C8.032 13.752 8.32 15.008 8.896 16.096C9.472 17.184 10.28 18.032 11.32 18.64C12.376 19.248 13.608 19.552 15.016 19.552V20.344C14.632 20.456 14.232 20.536 13.816 20.584C13.416 20.632 12.992 20.656 12.544 20.656ZM12.52 19.936C11.416 19.68 10.448 19.2 9.616 18.496C8.784 17.776 8.136 16.888 7.672 15.832C7.208 14.76 6.976 13.592 6.976 12.328C6.976 11.064 7.208 9.904 7.672 8.848C8.136 7.79201 8.784 6.90401 9.616 6.184C10.448 5.448 11.416 4.96 12.52 4.72001C11.464 4.72001 10.48 4.92 9.568 5.32C8.656 5.72 7.864 6.272 7.192 6.976C6.52 7.664 5.992 8.472 5.608 9.4C5.24 10.312 5.056 11.288 5.056 12.328C5.056 13.384 5.24 14.376 5.608 15.304C5.992 16.216 6.52 17.024 7.192 17.728C7.864 18.416 8.656 18.96 9.568 19.36C10.48 19.744 11.464 19.936 12.52 19.936Z" fill="#FF0000"/>
     </g>
 
     <!-- SUN -->
-    <g transform="translate(520, 180)" filter="url(#filter0_d_1_89)">
+    <g id="sun" filter="url(#filter0_d_1_89)">
       <path d="M14.392 4.00001H16.144V7.21601H14.392V4.00001ZM8.46398 7.21601H6.99998V5.48801H8.72798V6.95201H10.216V8.70401H8.46398V7.21601ZM20.32 6.95201H21.808V5.48801H23.56V7.21601H22.072V8.70401H20.32V6.95201ZM8.46398 11.416H9.95198V9.92801H11.44V8.44001H19.096V9.92801H20.584V11.416H22.072V19.096H20.584V20.56H19.096V22.048H11.44V20.56H9.95198V19.096H8.46398V11.416ZM3.99998 14.368H7.23998V16.12H3.99998V14.368ZM23.296 14.368H26.512V16.12H23.296V14.368ZM5.51198 23.272H6.99998V21.808H8.72798V23.536H7.23998V25.048H5.51198V23.272ZM20.32 21.808H22.072V23.272H23.56V25.048H21.808V23.536H20.32V21.808ZM14.392 23.272H16.144V26.536H14.392V23.272Z" fill="#FF0000"/>
     </g>
-    
-    
   </g>
 
   <defs>
