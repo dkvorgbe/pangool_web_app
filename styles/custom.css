@@ -284,4 +284,54 @@ video {
     transform: translate(287px, 0px) scale(1.2);
   }
 
+/* Vertex Tooltip Styling */
+.vertex-tooltip {
+    position: fixed;
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    max-width: 300px;
+}
+
+.vertex-tooltip.visible {
+    opacity: 1;
+}
+
+.tooltip-content {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: var(--red-primary);
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 2px solid var(--red-primary);
+    font-family: 'Workbench', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+@media (max-width: 768px) {
+    .vertex-tooltip {
+        max-width: 250px;
+    }
+    
+    .tooltip-content {
+        font-size: 12px;
+        padding: 10px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .vertex-tooltip {
+        max-width: 200px;
+    }
+    
+    .tooltip-content {
+        font-size: 11px;
+        padding: 8px 12px;
+    }
+}
+
 
