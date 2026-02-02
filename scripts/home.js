@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Get geometric container and vertices
     const geometricContainer = document.getElementById('geometric-container');
     const vertices = document.querySelectorAll('.vertex');
-    const mainShape = document.getElementById('main-shape');
 
     // Add hover effect to individual vertices
     vertices.forEach(vertex => {
@@ -42,9 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Click handler for geometric shape - navigate to diviner page
     geometricContainer.addEventListener('click', () => {
-        // Add a subtle click animation
-        mainShape.style.transform = 'scale(0.95)';
-        
+        // Add a subtle click animation if SVG container exists
+        if (geometricContainer) {
+            geometricContainer.style.transform = 'scale(0.95)';
+        }
+
         setTimeout(() => {
             window.location.href = 'diviner.html';
         }, 150);
@@ -91,7 +92,7 @@ function initializeTooltips() {
     setTimeout(() => {
         Object.keys(tooltipData).forEach(elementId => {
             const element = document.getElementById(elementId);
-            
+
             if (element) {
                 // Add cursor pointer style
                 element.style.cursor = 'pointer';
@@ -109,6 +110,15 @@ function initializeTooltips() {
                 });
             }
         });
+
+        // Add click handler for OKIIN to navigate to diviner page
+        const okiinElement = document.getElementById('okiin');
+        if (okiinElement) {
+            okiinElement.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent container click handler
+                window.location.href = 'diviner.html';
+            });
+        }
     }, 500); // Wait for SVG to be loaded into DOM
 
     function showTooltip(event, elementId, text) {

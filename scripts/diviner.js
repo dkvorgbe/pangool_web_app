@@ -1,7 +1,10 @@
 // Diviner page - API calls and divination display logic
 
 // Configuration - Update this with your Cloudflare Worker endpoint
-const API_ENDPOINT = 'https://your-worker.your-subdomain.workers.dev/divination';
+// For local testing:
+const API_ENDPOINT = 'http://localhost:8080/divination-all';
+// For production:
+// const API_ENDPOINT = 'https://your-worker.your-subdomain.workers.dev/divination';
 
 // DOM Elements
 let loadingState, divinationResults, errorState;
