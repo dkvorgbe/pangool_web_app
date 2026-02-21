@@ -1,4 +1,4 @@
-FROM ~/ai_paradox_2026/pangol/models/pangool_exp06.gguf
+FROM /Users/roco0021/ai_paradox_2026/pangol/models/pangool_exp06.gguf
 
 PARAMETER temperature 0.8
 PARAMETER top_p 0.9
